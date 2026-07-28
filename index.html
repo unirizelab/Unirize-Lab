@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unirize Lab | Premium Minecraft & Game Server Hosting</title>
+  <meta name="description" content="Deploy your high-performance Minecraft & game server in under 30 seconds with Unirize Lab. Powered by Intel Xeon CPUs and NVMe SSDs. 24/7 Discord Support.">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body class="aurora-bg">
+
+<div id="loader"><div class="spinner"></div></div>
+<div class="progress-bar" id="progressBar"></div>
+<div id="mouse-glow"></div>
+
+<header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.svg" alt="Unirize Lab Logo">
+      <span>UNIRIZE LAB</span>
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="plans.html">Hosting Plans</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="status.html">System Status</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a href="https://discord.gg/WWbVvfJ5Ru" target="_blank" rel="noopener noreferrer" class="btn btn-discord">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028z"/></svg>
+        Discord Support
+      </a>
+    </div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">☰</button>
+  </div>
+</header>
+
+
+<!-- Hero Section -->
+<section style="min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 8rem;">
+  <div style="max-width: 900px; position: relative; z-index: 2;">
+    <span class="badge" style="background: rgba(0,229,255,0.1); color: var(--primary); padding: 0.5rem 1.2rem; border-radius: 50px; border: 1px solid var(--border-highlight); font-family: var(--font-code); font-size: 0.85rem;">⚡ LIGHTNING FAST GAME SERVERS</span>
+    <h1 class="hero-title" style="font-size: 3.8rem; margin: 1.5rem 0; line-height: 1.1; background: linear-gradient(180deg, #FFFFFF 30%, #94A3B8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+      Deploy Your Minecraft Server<br>In Under <span style="color: var(--primary); -webkit-text-fill-color: var(--primary);">30 Seconds</span>.
+    </h1>
+    <p style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+      Experience ultra-low latency gaming with enterprise-grade Intel Xeon E-2386G processors, NVMe storage, and 24/7 dedicated Discord support.
+    </p>
+    <div class="hero-buttons" style="display: flex; gap: 1.2rem; justify-content: center; align-items: center;">
+      <a href="plans.html" class="btn btn-primary" style="padding: 1rem 2.2rem; font-size: 1.1rem;">View Plans & Pricing</a>
+      <a href="https://discord.gg/WWbVvfJ5Ru" target="_blank" rel="noopener" class="btn btn-discord" style="padding: 1rem 2.2rem; font-size: 1.1rem;">Join Our Discord</a>
+    </div>
+  </div>
+</section>
+
+<!-- Hosting Plans Preview -->
+<section>
+  <div class="section-title">
+    <span class="badge">PLANS & PRICING</span>
+    <h2>Unbeatable Server Hosting Plans</h2>
+    <p>Choose the power you need. Scalable hardware engineered for smooth multiplayer gaming.</p>
+  </div>
+  <div class="pricing-grid" id="plans-container"></div>
+</section>
+
+<!-- Supported Modpacks & Loaders -->
+<section style="text-align: center;">
+  <div class="section-title">
+    <span class="badge">COMPATIBILITY</span>
+    <h2>Supported Software & Loaders</h2>
+    <p>Run any server core or modpack with full 1-click installer support.</p>
+  </div>
+  <div class="games-grid">
+    <div class="glass-card game-card"><h3>Paper</h3><p>High performance server software</p></div>
+    <div class="glass-card game-card"><h3>Purpur</h3><p>Ultra customizable Paper fork</p></div>
+    <div class="glass-card game-card"><h3>Forge</h3><p>Classic modded Minecraft</p></div>
+    <div class="glass-card game-card"><h3>Fabric</h3><p>Lightweight modern modding</p></div>
+    <div class="glass-card game-card"><h3>NeoForge</h3><p>Next-gen modding platform</p></div>
+    <div class="glass-card game-card"><h3>Geyser</h3><p>Bedrock & Java crossplay</p></div>
+  </div>
+</section>
+
+<!-- Key Features -->
+<section>
+  <div class="section-title">
+    <span class="badge">HARDWARE & POWER</span>
+    <h2>Built For Performance</h2>
+    <p>Enterprise infrastructure engineered specifically for high-tickrate game servers.</p>
+  </div>
+  <div class="features-grid">
+    <div class="glass-card feature-card">
+      <div class="game-icon">🚀</div>
+      <h3>Intel Xeon CPU</h3>
+      <p>Powered by high frequency Intel Xeon E-2386G processors with single-core performance focus.</p>
+    </div>
+    <div class="glass-card feature-card">
+      <div class="game-icon">⚡</div>
+      <h3>Enterprise NVMe</h3>
+      <p>PCIe 4.0 NVMe SSD storage ensuring near-instant chunk loading and world saving.</p>
+    </div>
+    <div class="glass-card feature-card">
+      <div class="game-icon">🛡️</div>
+      <h3>DDoS Protection</h3>
+      <p>Always-on multi-terabit DDoS protection keeping your server online through attacks.</p>
+    </div>
+    <div class="glass-card feature-card">
+      <div class="game-icon">💬</div>
+      <h3>24/7 Discord Support</h3>
+      <p>Dedicated engineers available directly on Discord to assist with setup and troubleshooting.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.svg" alt="Unirize Lab Logo">
+        <span>UNIRIZE LAB</span>
+      </a>
+      <p>High-performance Minecraft and game server hosting powered by Intel Xeon CPUs and Enterprise NVMe SSDs. Instant deployment, zero downtime.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="plans.html">Hosting Plans</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="refund.html">Refund Policy</a></li>
+        <li><a href="status.html">System Status</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="https://discord.gg/WWbVvfJ5Ru" target="_blank" rel="noopener">Discord Community</a></li>
+        <li><a href="https://discord.gg/WWbVvfJ5Ru" target="_blank" rel="noopener">24/7 Live Support</a></li>
+        <li><a href="https://discord.gg/WWbVvfJ5Ru" target="_blank" rel="noopener">Server Setup Help</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Unirize Lab. All rights reserved. Exclusively Supported via Discord.</p>
+    <p>Designed for Ultimate Gaming Performance.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/pricing.js"></script>
+</body>
+</html>
